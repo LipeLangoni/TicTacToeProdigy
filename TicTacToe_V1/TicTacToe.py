@@ -1,9 +1,9 @@
 # Hi, my name is Felipe Langoni and this is my first real code.
 
-#First, we create a variable which contains a empty string
+# First, we create a variable which contains an empty string
 blank = ""
 
-#Than, we create a array with tree arrays inside, each one with tree positions (3x3)
+# Then, we create an array with three arrays inside, each one with three positions (3x3)
 board = [
         [blank,blank,blank],
         [blank,blank,blank],
@@ -28,7 +28,7 @@ def printboard(board,i,j):
     print(f' {board[2][0]} '+'|'+f' {board[2][1]} '+'|'+f' {board[2][2]} ')
 
     
-# if choosen position is equal to a empty string, this move is valid
+# If chosen position is equal to an empty string, this move is valid
 def validatemove(board,i,j):
     if board[i][j] == blank:
         return True
@@ -36,7 +36,7 @@ def validatemove(board,i,j):
         return False
 
 
-# this fucntion receives user input and convert the indexes to be easier input the position
+# This function receives user's input and converts the indexes to be easier inputting the position
 
 def moveinput(m):
     p = int(input(m))
@@ -47,7 +47,7 @@ def moveinput(m):
         "Invalid Value"
         
         
-# This function manually checks for all the possible "tree in a sequence" combinations to determine a winner.
+# This function manually checks all the possible "three in a sequence" combinations to determine a winner.
 
 def winnerchecker(board):
    
@@ -105,4 +105,4 @@ def winnerchecker(board):
         for j in range(3):
             if(board[i][j] == blank):
                 return False
-    return "EMPATE"
+    return "DRAW"

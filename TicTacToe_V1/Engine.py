@@ -2,11 +2,11 @@
 import random
 from TicTacToe import *
 
-# IA function to play the game
+# AI function to play the game
 def engine(board):
         o = 0
 
-        # Manually compare all sequencies possible, and score in the third one to win the geme, or to stop the oponnent.
+        # Manually compare all possible sequences, and score in the third one to win the game, or to stop the opponent.
         # We use "and board[i][j] == blank" to make sure that the move will just be done if the last square of the sequence is empty, otherwise it will try to score twice in the same square.
 
         while(o<5):
@@ -61,9 +61,8 @@ def engine(board):
                 board[2][0] = "O"
                 break
             
-            # If none of above cases are found, we create a list using "append" method to save all the empty positions.
-            # This list contain lists wich contain the indexes of empty positions 
-            # We than choose a position of the list and make it
+            # If none of te cases above are found, we create a list using "append" method to save all the empty positions. 
+            # We then choose a position of the list and make it
             else:
                 positions = []
                 for i in range(3):
