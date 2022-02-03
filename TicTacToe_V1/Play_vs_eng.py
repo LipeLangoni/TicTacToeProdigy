@@ -13,8 +13,8 @@ def __main(board):
         j = 0
         n = 0
         while(n<10):
-            i = moveinput("Digite o valor de i")
-            j = moveinput("Digite o valor de j")
+            i = moveinput("Enter row position:")
+            j = moveinput("Enter column position:")
             if validatemove(board,i,j):
                 player1(board,i,j)
                 break
